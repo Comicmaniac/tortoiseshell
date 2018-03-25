@@ -10,10 +10,11 @@ body {
 
 .container {
   width: 960px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-img {  max-height: 100%;
+img {
+  max-height: 100%;
   max-width: 100%;}
 
 /* Header */
@@ -22,26 +23,30 @@ img {  max-height: 100%;
 
 .mainbanner {
   display: flex;
+  flex-wrap: wrap;
   height: 31rem;
   background-image: url(../images/glasses-bg.png);
   background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   padding-top: 0;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 0;
   background-color: cadetblue;
-  height: 3rem;
+  /* height: 3rem; */
   margin-top: 1rem;
   color: white;
+
 }
 
 .logoname {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
 
 }
@@ -53,32 +58,37 @@ img {  max-height: 100%;
 }
 
 nav {
-  border: solid 1px red;
+  /* border: solid 1px red; */
 }
 
 nav ul{
   display: flex;
   justify-content: center;
-  border: solid 1px red;
+  /* border: solid 1px red; */
 }
 
 nav ul li {
-  border: solid 1px red;
-  padding-right: 2rem;
-  margin: 0 auto;
+  /* border: solid 1px red; */
+  /* OUd: padding: 1rem 2rem 1rem 0; */
+  display: inline;
+  padding: 0 1rem;
 }
 
 .payoff {
+  align-self: flex-start;
   background-color: white;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
   margin-bottom: 11rem;
+  height: 5rem;
+
+
 }
 
 .payoff p {
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
-  padding: 5rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 /* Products */
@@ -90,6 +100,8 @@ nav ul li {
 
 .product {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .products img {
   width: 5rem;
@@ -98,6 +110,11 @@ nav ul li {
   margin-right: 3rem;
 }
 
+.product img {
+  height: 4rem;
+  display: flex
+  align-items: center;
+}
 .products p {
   align-self: flex-end;
 
@@ -108,4 +125,56 @@ nav ul li {
   display: flex;
 }
 
+.title {
+  background-color: cadetblue;
+  width: 10rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 3rem;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+}
+
+.text {
+  padding: 1rem 5rem 5rem 0;
+}
+
 /* Footer */
+
+.footer {
+  background-color: azure;
+  height: 9.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-black {
+  height: 1.5rem;
+  padding: 4rem 1rem 4rem 4rem;
+}
+
+.copyright {
+padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .mainbanner {
+    height: 17rem;
+    background-image: url(../images/glasses-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 0;
+  }
+
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo-text {
+    display: none;
+  }
+}
